@@ -1,7 +1,7 @@
 package com.codecoda.training;
 
 public class Called {
-    Called() {
+    public Called() {
         System.out.println("Called constructor");
     }
 }
