@@ -1,4 +1,4 @@
-version: "1.0"
+version: "3.3"
 services:
   java:
     container_name: java-training-docker
@@ -9,9 +9,7 @@ services:
       - .:/java-training
     networks:
       - docker_network
-    depends_on:
-      - mysql
-    command: bash
+    stdin_open: true
     ports:
       - "4567:4567"
 
