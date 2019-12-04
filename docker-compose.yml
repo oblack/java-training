@@ -1,0 +1,20 @@
+version: "1.0"
+services:
+  java:
+    container_name: java-training-docker
+    build:
+      context: .
+      dockerfile: dockerfile
+    volumes:
+      - .:/java-training
+    networks:
+      - docker_network
+    depends_on:
+      - mysql
+    command: bash
+    ports:
+      - "4567:4567"
+
+networks:
+  docker_network:
+    driver: bridge
